@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="测试中使用  1234function it_is_a_test()&amp;#123;    $this-&amp;gt;withoutExceptionHandling();    ...&amp;#125;  这样可以在终端中显示具体的php报错的位置.  测试中使用expectException()方法可以用来测试抛出错误  12345678910111213// Acme.phpclass Acme&amp;#123">
+<meta name="description" content="diff命令的使用  1diff -u a.txt b.txt &amp;gt; diff.txt  对比a.txt, b.txt, 将结果输出到diff.txt文件, -u参数, 让结果有上下文.  patch命令, diff命令的反向操作  12cp a.txt b.txtpatch -R b.txt &amp;lt; c.txt  这样 b.txt 文件就会变回 a.txt 的内容, -R 参数会保存未应">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Laravel中的细节">
-<meta property="og:url" content="http://yoursite.com/2018/05/04/Laravel中的细节/index.html">
+<meta property="og:title" content="git学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/05/18/git学习笔记/index.html">
 <meta property="og:site_name" content="Ghexu">
-<meta property="og:description" content="测试中使用  1234function it_is_a_test()&amp;#123;    $this-&amp;gt;withoutExceptionHandling();    ...&amp;#125;  这样可以在终端中显示具体的php报错的位置.  测试中使用expectException()方法可以用来测试抛出错误  12345678910111213// Acme.phpclass Acme&amp;#123">
+<meta property="og:description" content="diff命令的使用  1diff -u a.txt b.txt &amp;gt; diff.txt  对比a.txt, b.txt, 将结果输出到diff.txt文件, -u参数, 让结果有上下文.  patch命令, diff命令的反向操作  12cp a.txt b.txtpatch -R b.txt &amp;lt; c.txt  这样 b.txt 文件就会变回 a.txt 的内容, -R 参数会保存未应">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-15T18:14:41.341Z">
+<meta property="og:image" content="http://yoursite.com/images/git1.jpg">
+<meta property="og:updated_time" content="2018-05-19T05:30:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Laravel中的细节">
-<meta name="twitter:description" content="测试中使用  1234function it_is_a_test()&amp;#123;    $this-&amp;gt;withoutExceptionHandling();    ...&amp;#125;  这样可以在终端中显示具体的php报错的位置.  测试中使用expectException()方法可以用来测试抛出错误  12345678910111213// Acme.phpclass Acme&amp;#123">
+<meta name="twitter:title" content="git学习笔记">
+<meta name="twitter:description" content="diff命令的使用  1diff -u a.txt b.txt &amp;gt; diff.txt  对比a.txt, b.txt, 将结果输出到diff.txt文件, -u参数, 让结果有上下文.  patch命令, diff命令的反向操作  12cp a.txt b.txtpatch -R b.txt &amp;lt; c.txt  这样 b.txt 文件就会变回 a.txt 的内容, -R 参数会保存未应">
+<meta name="twitter:image" content="http://yoursite.com/images/git1.jpg">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/04/Laravel中的细节/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/18/git学习笔记/"/>
 
 
 
 
 
-  <title>Laravel中的细节 | Ghexu</title>
+  <title>git学习笔记 | Ghexu</title>
   
 
 
@@ -252,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/04/Laravel中的细节/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/git学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hexu">
@@ -269,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Laravel中的细节</h1>
+          <h1 class="post-title" itemprop="name headline">git学习笔记</h1>
         
 
         <div class="post-meta">
@@ -281,8 +283,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-04T19:06:05+08:00">
-                2018-05-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-18T15:25:04+08:00">
+                2018-05-18
               </time>
             
 
@@ -292,28 +294,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Laravel/" itemprop="url" rel="index">
-                    <span itemprop="name">Laravel</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -322,8 +302,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/04/Laravel中的细节/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/04/Laravel中的细节/" itemprop="commentCount"></span>
+                <a href="/2018/05/18/git学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/18/git学习笔记/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -352,15 +332,33 @@
 
       
         <ol>
-<li><p>测试中使用</p>
- <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">it_is_a_test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">$this</span>-&gt;withoutExceptionHandling();</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 这样可以在终端中显示具体的php报错的位置.</p>
+<li><p><code>diff</code>命令的使用</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diff -u a.txt b.txt &gt; diff.txt</span><br></pre></td></tr></table></figure>
+<p> 对比a.txt, b.txt, 将结果输出到diff.txt文件, <code>-u</code>参数, 让结果有上下文.</p>
 </li>
-<li><p>测试中使用<code>expectException()</code>方法可以用来测试抛出错误</p>
- <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Acme.php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Acme</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        ...</span></span><br><span class="line"><span class="function">        <span class="title">throw</span> \<span class="title">Exception</span><span class="params">(<span class="string">'This is a error!'</span>)</span></span></span><br><span class="line"><span class="function">&#125;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">// <span class="title">AcmeTest</span>.<span class="title">php</span></span></span><br><span class="line"><span class="function"><span class="title">class</span> <span class="title">AcmeTest</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">it_is_a_test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;expectException(\<span class="keyword">Exception</span>::class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p><code>patch</code>命令, <code>diff</code>命令的反向操作</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp a.txt b.txt</span><br><span class="line">patch -R b.txt &lt; c.txt</span><br></pre></td></tr></table></figure>
+<p> 这样 b.txt 文件就会变回 a.txt 的内容, <code>-R</code> 参数会保存未应用patch前的b.txt文件</p>
 </li>
-<li><p>在生产环境中使用<code>config:cache</code>后, 只能在cofing文件中使用<code>env()</code>, 因为<code>.env</code>文件不会再被加载, 所有<code>.env</code>文件中的值都被读取为NULL</p>
+<li><p><code>git rev-parse --git-dir</code>找出当前repo的<code>.git</code>目录所在位置.</p>
 </li>
+<li><code>git rev-parse --show-toplevel</code></li>
+<li><code>git config -e</code>修改当前项目的配置文件<br> <code>git config -e --global</code>修改<code>~/.gitconfig</code><br> <code>git config -e --system</code>修改<code>/etc/gitconfig</code></li>
+<li><code>git config core.bare</code>读取配置中某个小段的值</li>
+<li><code>git config core.bare true</code>修改配置值</li>
+<li><p>可以使用<code>git config</code>编辑 <code>.ini</code>文件</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$GIT_CONFIG=test.ini git config a.b.c.d &quot;hello,world&quot;</span><br></pre></td></tr></table></figure>
+<p> 读取值</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$GIT_CONFIG=test.ini git config a.b.c.d &quot;hello,world”</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>git log --stat</code>可以看到每次提交的具体变更文件</p>
+</li>
+<li><code>git diff</code>比较工作区和暂存区的差异<br><code>git diff HEAD</code>比较工作区和HEAD(当前工作分支或者理解为版本库)的差异<br><code>git diff --cached</code>或者<code>--staged</code>比较暂存区和版本库里面的差别</li>
+<li>“当执行git status命令（或者git diff命令）扫描工作区改动的时候，先依据.git/index文件中记录的（用于跟踪工作区文件的）时间戳、长度等信息判断工作区文件是否改变，如果工作区文件的时间戳改变了，说明文件的内容可能被改变了，需要打开文件，读取文件内容，与更改前的原始文件相比较，判断文件内容是否被更改。如果文件内容没有改变，则将该文件新的时间戳记录到.git/index文件中。因为如果要判断文件是否更改，使用时间戳、文件长度等信息进行比较要比通过文件内容比较要快得多，所以Git这样的实现方式可以让工作区状态扫描更快速地执行，这也是Git高效的原因之一。”</li>
+</ol>
+<p>摘录来自: 蒋鑫. “Git权威指南。” iBooks. </p>
+<ol>
+<li><img src="/images/git1.jpg" alt=""></li>
 </ol>
 
       
@@ -386,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/02/升级Macos到10-13后valet无法使用解决方法/" rel="next" title="升级Macos到10.13后valet无法使用解决方法">
-                <i class="fa fa-chevron-left"></i> 升级Macos到10.13后valet无法使用解决方法
+              <a href="/2018/05/10/Nginx学习笔记/" rel="next" title="Nginx学习笔记">
+                <i class="fa fa-chevron-left"></i> Nginx学习笔记
               </a>
             
           </div>
@@ -395,10 +393,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/10/Nginx学习笔记/" rel="prev" title="Nginx学习笔记">
-                Nginx学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
