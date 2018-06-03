@@ -252,6 +252,310 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/docker学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hexu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ghexu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/27/docker学习笔记/" itemprop="url">docker学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-27T15:58:01+08:00">
+                2018-05-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/27/docker学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/27/docker学习笔记/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>调试错误的容器<br>  如果容器出了问题, run 之后无法跑起来, 可以通过<code>docker logs container</code>来看日志. 然后</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker commit $CONTAINER_ID user/test_image</span><br><span class="line">docker run -ti --entrypoint=sh user/test_image</span><br></pre></td></tr></table></figure>
+<p>  这样可以进容器去调试</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/20/fcp学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hexu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ghexu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/20/fcp学习笔记/" itemprop="url">fcp学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-20T23:15:31+08:00">
+                2018-05-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/20/fcp学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/20/fcp学习笔记/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>** 快捷键</p>
+<pre><code>- `v`: 启用或者禁用片段
+- `Fn + →`: 跳转到时间轴末端
+- `Fn + ←`: 跳转到时间轴开头
+- `j`, `k`, `l`: 反向播, 暂停, 正向播
+- `k+l`, `j+l`: 慢速播放
+- `/`: 播放截取的片段
+- `i`, `o`: (in)截取clip的开始, (out)截取clip的结束
+- `f`: 可以给clip或者clip的一部分加入favorite
+- `del`: 可以给片段标记为隐藏
+- `u`: 取消所有标记
+- `w`: 将片段插入当前项目指针位置
+- `e`: 将片段插入当前项目末端
+- `x`: 在主线的某个片段上按`x`, 相当于在这个片段的开头和结尾按了i和o
+- `shift + d`: 如果插入的片段比项目时间线长, 以片段的结尾对齐
+- `shift + x`: 标记了时间标记后, 移动鼠标到想要删除的地方, 可直接删除时间标记到鼠标的部分
+- `[`, `]`: 调整修正片断 
+- `opt + [`, `opt + ]`: 裁剪片段上光标所在位置到片段前或者片段末尾
+- `,`, `.`: 将项目的片段长度左右修正
+- `,`, `.`: 如果选中的是整个片段操作, 将保持选中片段长度, 修改前后片段的长度
+- `ctrl + d`: 显示片段的时长
+- `shift + del`: 将项目的时间轴上选定部分删除并留空
+- `shift + ?`: 播放附近片段
+- `ctrl + +`, `ctrl + -`: 调整片段的音量
+- `opt + 左键`: 在音轨上放上关键帧, 放上3个, 调节中间那个, 可以不影响外面的音轨
+- `opt + g`: 将所选片段和音轨建立复合片段
+- `y`: 试演
+- `ctrl + ;`, `ctrl + &apos;`: 在标记件前后切换
+- `ctrl +,`, `ctrl + .`: 如果选中了标记, 需要先用上面的快捷键切换到标记上, 则是前后移动标记
+</code></pre><p>** 如何让音轨不和第一个片段链接在一起<br>通常第一个片段会和音轨链接在一起, 可以选择除了音轨以外的所以片段, <code>p</code>后, 右移一些, 这样会在第一个片段前面创造出一个空白的片断, 再将音轨和这个空白片段链接在一起, 这样后面的片段就不会影响到音轨了.</p>
+<p>** 人声一般在 -12 ~ -6 dB</p>
+<p>** 多视角<br>在做多视角切割的时候, 如果已经做好的主线, 想要切换主线上的视角, 可以选中主线上的片段, 然后在想要切换的片段上面<code>opt + 左键</code></p>
+<p>** 批量修改静态图片时长<br>选中所有图片, <code>ctrl + d</code>后输入时长, <code>300</code>代表3秒</p>
+<p>** 转场特效</p>
+<ul>
+<li>选中主线上需要转场的片段, <code>cmd + t</code></li>
+<li><code>光流</code>转场特效可以缓解小部分剪切的卡顿</li>
+</ul>
+<p>** 选中片段上的某一帧, 鼠标移动动片段上, 然后<code>edit -&gt; connect frezze frame</code>, 可以把这一帧添加到主线上, 作为静态动画.</p>
+<p>** 校色的时候, 一半让人色的明度在70,75左右</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/git学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -358,6 +662,9 @@
 <li><code>git diff</code>比较工作区和暂存区的差异<br><code>git diff HEAD</code>比较工作区和HEAD(当前工作分支或者理解为版本库)的差异<br><code>git diff --cached</code>或者<code>--staged</code>比较暂存区和版本库里面的差别</li>
 <li>“当执行git status命令（或者git diff命令）扫描工作区改动的时候，先依据.git/index文件中记录的（用于跟踪工作区文件的）时间戳、长度等信息判断工作区文件是否改变，如果工作区文件的时间戳改变了，说明文件的内容可能被改变了，需要打开文件，读取文件内容，与更改前的原始文件相比较，判断文件内容是否被更改。如果文件内容没有改变，则将该文件新的时间戳记录到.git/index文件中。因为如果要判断文件是否更改，使用时间戳、文件长度等信息进行比较要比通过文件内容比较要快得多，所以Git这样的实现方式可以让工作区状态扫描更快速地执行，这也是Git高效的原因之一。”</li>
 <li><img src="/images/git1.jpg" alt=""></li>
+<li><code>git ls-tree -l HEAD</code>查看HEAD版本库中的文件索引</li>
+<li><code>git clean -fd</code>清除当前工作区中未加入版本库里面的文件和文件夹</li>
+<li><code>git checkout .</code>用暂存区内容替换工作区</li>
 </ol>
 
           
@@ -1482,7 +1789,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

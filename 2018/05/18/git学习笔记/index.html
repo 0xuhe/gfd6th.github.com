@@ -87,7 +87,7 @@
 <meta property="og:description" content="diff命令的使用  1diff -u a.txt b.txt &amp;gt; diff.txt  对比a.txt, b.txt, 将结果输出到diff.txt文件, -u参数, 让结果有上下文.  patch命令, diff命令的反向操作  12cp a.txt b.txtpatch -R b.txt &amp;lt; c.txt  这样 b.txt 文件就会变回 a.txt 的内容, -R 参数会保存未应">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/git1.jpg">
-<meta property="og:updated_time" content="2018-05-19T05:32:02.897Z">
+<meta property="og:updated_time" content="2018-05-19T05:43:12.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git学习笔记">
 <meta name="twitter:description" content="diff命令的使用  1diff -u a.txt b.txt &amp;gt; diff.txt  对比a.txt, b.txt, 将结果输出到diff.txt文件, -u参数, 让结果有上下文.  patch命令, diff命令的反向操作  12cp a.txt b.txtpatch -R b.txt &amp;lt; c.txt  这样 b.txt 文件就会变回 a.txt 的内容, -R 参数会保存未应">
@@ -356,6 +356,9 @@
 <li><code>git diff</code>比较工作区和暂存区的差异<br><code>git diff HEAD</code>比较工作区和HEAD(当前工作分支或者理解为版本库)的差异<br><code>git diff --cached</code>或者<code>--staged</code>比较暂存区和版本库里面的差别</li>
 <li>“当执行git status命令（或者git diff命令）扫描工作区改动的时候，先依据.git/index文件中记录的（用于跟踪工作区文件的）时间戳、长度等信息判断工作区文件是否改变，如果工作区文件的时间戳改变了，说明文件的内容可能被改变了，需要打开文件，读取文件内容，与更改前的原始文件相比较，判断文件内容是否被更改。如果文件内容没有改变，则将该文件新的时间戳记录到.git/index文件中。因为如果要判断文件是否更改，使用时间戳、文件长度等信息进行比较要比通过文件内容比较要快得多，所以Git这样的实现方式可以让工作区状态扫描更快速地执行，这也是Git高效的原因之一。”</li>
 <li><img src="/images/git1.jpg" alt=""></li>
+<li><code>git ls-tree -l HEAD</code>查看HEAD版本库中的文件索引</li>
+<li><code>git clean -fd</code>清除当前工作区中未加入版本库里面的文件和文件夹</li>
+<li><code>git checkout .</code>用暂存区内容替换工作区</li>
 </ol>
 
       
@@ -390,6 +393,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/20/fcp学习笔记/" rel="prev" title="fcp学习笔记">
+                fcp学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -460,7 +467,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
