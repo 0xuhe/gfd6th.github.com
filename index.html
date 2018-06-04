@@ -799,18 +799,17 @@
 <li><code>HEAD</code>, <code>master</code>, ‘.git/refs/heads/master’ 一般是一样的</li>
 <li><code>git cat-file -t sadfwef(hashid)</code>查看类型</li>
 <li><code>git cat-file -p asdfsadf(hashid)</code>查看内容</li>
-<li>使用master代表分支master中最新的提交，也可以使用全称refs/heads/master或heads/master。</li>
-</ol>
+<li><p>使用master代表分支master中最新的提交，也可以使用全称refs/heads/master或heads/master。</p>
 <p>使用HEAD代表版本库中最近的一次提交。</p>
 <p>符号^可以用于指代父提交。例如：</p>
-<pre><code>* HEAD^代表版本库中的上一次提交，即最近一次提交的父提交。
-* HEAD^^则代表HEAD^的父提交。
-</code></pre><p>对于一个提交有多个父提交，可以在符号^后面用数字表示是第几个父提交。例如：</p>
-<pre><code>* a573106^2的含义是提交a573106的多个父提交中的第二个父提交。
-* HEAD^1相当于HEAD^，含义是HEAD的多个父提交中的第一个父提交。
-* HEAD^^2的含义是HEAD^（HEAD父提交）的多个父提交中的第二个父提交。
-</code></pre><p>符号～＜n＞也可以用于指代祖先提交。例如：<br>    a573106～5即相当于a573106^^^^^。</p>
-<ol>
+<ul>
+<li>HEAD^代表版本库中的上一次提交，即最近一次提交的父提交。</li>
+<li>HEAD^^则代表HEAD^的父提交。<br>对于一个提交有多个父提交，可以在符号^后面用数字表示是第几个父提交。例如：</li>
+<li>a573106^2的含义是提交a573106的多个父提交中的第二个父提交。</li>
+<li>HEAD^1相当于HEAD^，含义是HEAD的多个父提交中的第一个父提交。</li>
+<li>HEAD^^2的含义是HEAD^（HEAD父提交）的多个父提交中的第二个父提交。<br>符号～＜n＞也可以用于指代祖先提交。例如：<br>a573106～5即相当于a573106^^^^^。</li>
+</ul>
+</li>
 <li><code>git reset --hard HEAD^</code>将master重置到上一个老的提交上, 会破坏工作区未提交的改动, 这条命令会修改log历史, 重置后不可前进</li>
 <li><code>git reflog show master(refid)</code>, 可以看到所有的游标操作, reset操作历史也可以看到, 可以找到reset消失的快照</li>
 <li><p><code>git reset --hard master@{2}</code>, 找回reset前的状态</p>
@@ -826,11 +825,16 @@
 <li><p><code>git show &lt;commit&gt;</code>: 查看commit的详情</p>
 </li>
 <li><code>git checkout</code>: 如果不是checkout到分支, 将会导致detach状态(<code>.git/HEAD</code>里面是哈希值, 而不是分支名), 这个状态下提交的commit, 不能通过master或其他引用访问到(也就是切换回master时, 无法保持commit)</li>
-<li>使用<code>git merge</code>修复detach. <ol>
+<li><p>使用<code>git merge</code>修复detach. </p>
+<ol>
 <li><code>git branch -v</code>: 确认现在在master分支.</li>
 <li><code>git merge &lt;hashid&gt;</code>: hashid是detach状态下提交后的commit值, 这个值在切回master时会消失</li>
 <li>合并后, 会出现detach模式下提交的文件</li>
 </ol>
+<blockquote>
+<h3 id="深入git-checkout"><a href="#深入git-checkout" class="headerlink" title="深入git checkout"></a>深入<code>git checkout</code></h3><p>这条命令会重写工作区<br>用法一: git checkout[-q][＜commit＞][–]＜paths＞…<br>用法二: git checkout[＜branch＞]<br>用法三: git checkout[-m][[-b|–orphan]＜new_branch＞][＜start_point＞]</p>
+<h3 id="与reset的不同"><a href="#与reset的不同" class="headerlink" title="与reset的不同"></a>与<code>reset</code>的不同</h3><p>第一种用法的＜commit＞是可选项，如果省略则相当于从暂存区（index）进行检出。这和上一章的重置命令大不相同：重置的默认值是HEAD，而检出的默认值是暂存区。因此重置一般用于重置暂存区（除非使用–hard参数，否则不重置工作区），而检出命令主要是覆盖工作区（如果＜commit＞不省略，也会替换暂存区中相应的文件）。</p>
+</blockquote>
 </li>
 </ol>
 
