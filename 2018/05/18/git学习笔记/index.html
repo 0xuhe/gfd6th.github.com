@@ -87,7 +87,8 @@
 <meta property="og:description" content="diff命令的使用  1diff -u a.txt b.txt &amp;gt; diff.txt  对比a.txt, b.txt, 将结果输出到diff.txt文件, -u参数, 让结果有上下文.  patch命令, diff命令的反向操作  12cp a.txt b.txtpatch -R b.txt &amp;lt; c.txt  这样 b.txt 文件就会变回 a.txt 的内容, -R 参数会保存未应">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/git1.jpg">
-<meta property="og:updated_time" content="2018-05-19T05:43:12.663Z">
+<meta property="og:image" content="http://yoursite.com/images/git2.jpg">
+<meta property="og:updated_time" content="2018-06-04T08:53:55.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git学习笔记">
 <meta name="twitter:description" content="diff命令的使用  1diff -u a.txt b.txt &amp;gt; diff.txt  对比a.txt, b.txt, 将结果输出到diff.txt文件, -u参数, 让结果有上下文.  patch命令, diff命令的反向操作  12cp a.txt b.txtpatch -R b.txt &amp;lt; c.txt  这样 b.txt 文件就会变回 a.txt 的内容, -R 参数会保存未应">
@@ -359,6 +360,29 @@
 <li><code>git ls-tree -l HEAD</code>查看HEAD版本库中的文件索引</li>
 <li><code>git clean -fd</code>清除当前工作区中未加入版本库里面的文件和文件夹</li>
 <li><code>git checkout .</code>用暂存区内容替换工作区</li>
+<li><code>git diff</code>的比较关系<br><img src="/images/git2.jpg" alt=""></li>
+<li><code>HEAD</code>, <code>master</code>, ‘.git/refs/heads/master’ 一般是一样的</li>
+<li><code>git cat-file -t sadfwef(hashid)</code>查看类型</li>
+<li><code>git cat-file -p asdfsadf(hashid)</code>查看内容</li>
+<li>使用master代表分支master中最新的提交，也可以使用全称refs/heads/master或heads/master。</li>
+</ol>
+<p>使用HEAD代表版本库中最近的一次提交。</p>
+<p>符号^可以用于指代父提交。例如：</p>
+<pre><code>--- HEAD^代表版本库中的上一次提交，即最近一次提交的父提交。
+
+--- HEAD^^则代表HEAD^的父提交。
+</code></pre><p>对于一个提交有多个父提交，可以在符号^后面用数字表示是第几个父提交。例如：</p>
+<pre><code>--- a573106^2的含义是提交a573106的多个父提交中的第二个父提交。
+
+--- HEAD^1相当于HEAD^，含义是HEAD的多个父提交中的第一个父提交。
+
+--- HEAD^^2的含义是HEAD^（HEAD父提交）的多个父提交中的第二个父提交。
+</code></pre><p>符号～＜n＞也可以用于指代祖先提交。例如：</p>
+<pre><code>a573106～5即相当于a573106^^^^^。
+</code></pre><ol>
+<li><code>git reset --hard HEAD^</code>将master重置到上一个老的提交上, 会破坏工作区未提交的改动, 这条命令会修改log历史, 重置后不可前进</li>
+<li><code>git reflog show master(refid)</code>, 可以看到所有的游标操作, reset操作历史也可以看到, 可以找到reset消失的快照</li>
+<li><code>git reset --hard master@{2}</code>, 找回reset前的状态</li>
 </ol>
 
       
@@ -467,7 +491,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
