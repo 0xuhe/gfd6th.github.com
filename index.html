@@ -817,7 +817,16 @@
 </code></pre><ol>
 <li><code>git reset --hard HEAD^</code>将master重置到上一个老的提交上, 会破坏工作区未提交的改动, 这条命令会修改log历史, 重置后不可前进</li>
 <li><code>git reflog show master(refid)</code>, 可以看到所有的游标操作, reset操作历史也可以看到, 可以找到reset消失的快照</li>
-<li><code>git reset --hard master@{2}</code>, 找回reset前的状态</li>
+<li><p><code>git reset --hard master@{2}</code>, 找回reset前的状态</p>
+<blockquote>
+<h3 id="git-reset-详解"><a href="#git-reset-详解" class="headerlink" title="git reset 详解"></a><code>git reset</code> 详解</h3><p>两种格式<br>用法一: <code>git reset[-q][＜commit＞][--]＜paths＞...</code><br>用法二: <code>git reset[--soft|--mixed|--hard|--merge|--keep][-q][＜commit＞]</code><br>第一种用法在命令中包含路径＜paths＞。为了避免路径和引用（或者提交ID）同名而发生冲突，可以在＜paths＞前用两个连续的短线（减号）作为分隔。<br>第一种用法（包含了路径＜paths＞的用法）不会重置引用，更不会改变工作区，而是用commit下path的文件替换暂存区文件, 相当于取消之前的<code>git add &lt;path&gt;</code>命令对暂存区的修改<br><img src="/images/git3.jpg" alt=""></p>
+<ul>
+<li><code>--hard</code>: 执行1,2,3步, 替换后, 工作区,暂存区,和HEAD指向相同目录树</li>
+<li><code>--soft</code>: 执行1, 只改变引用指向, 不改变暂存区和工作区</li>
+<li><code>--mixed</code>: 这个是默认的, 执行1,2, 修改引用和暂存区, 不修改工作区<br>示例:<br><code>git reset</code>, <code>git reset --mixed HEAD</code>, 修改引用和暂存区, 不修改工作区, 相当于<code>git add</code>的反向操作<br><code>git reset -- filename</code>, <code>git reset HEAD filename</code>: 将filename移除暂存区, 其他文件不动, 相当于<code>git add filename</code>的反向操作.<br><code>git reset --soft HEAD^</code>: 工作区和暂存区不变, 但是引用回退一次, 当对最新提交的提交说明或提交的更改不满意时，撤销最新的提交以便重新提交。<code>git commit --amend</code>里面用到了这个命令<br><code>git reset (--mixed) HEAD^</code>: 工作区不变, 引用和暂存区回退一次</li>
+</ul>
+</blockquote>
+</li>
 </ol>
 
           
