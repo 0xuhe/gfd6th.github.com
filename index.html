@@ -823,6 +823,15 @@
 </ul>
 </blockquote>
 </li>
+<li><p><code>git show &lt;commit&gt;</code>: 查看commit的详情</p>
+</li>
+<li><code>git checkout</code>: 如果不是checkout到分支, 将会导致detach状态(<code>.git/HEAD</code>里面是哈希值, 而不是分支名), 这个状态下提交的commit, 不能通过master或其他引用访问到(也就是切换回master时, 无法保持commit)</li>
+<li>使用<code>git merge</code>修复detach. <ol>
+<li><code>git branch -v</code>: 确认现在在master分支.</li>
+<li><code>git merge &lt;hashid&gt;</code>: hashid是detach状态下提交后的commit值, 这个值在切回master时会消失</li>
+<li>合并后, 会出现detach模式下提交的文件</li>
+</ol>
+</li>
 </ol>
 
           
