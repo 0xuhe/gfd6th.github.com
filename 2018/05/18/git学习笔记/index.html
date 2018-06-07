@@ -89,7 +89,8 @@
 <meta property="og:image" content="http://yoursite.com/images/git1.jpg">
 <meta property="og:image" content="http://yoursite.com/images/git2.jpg">
 <meta property="og:image" content="http://yoursite.com/images/git3.jpg">
-<meta property="og:updated_time" content="2018-06-04T14:49:37.688Z">
+<meta property="og:image" content="http://yoursite.com/images/git.jpg">
+<meta property="og:updated_time" content="2018-06-07T08:53:49.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git学习笔记">
 <meta name="twitter:description" content="diff命令的使用  1diff -u a.txt b.txt &amp;gt; diff.txt  对比a.txt, b.txt, 将结果输出到diff.txt文件, -u参数, 让结果有上下文.  patch命令, diff命令的反向操作  12cp a.txt b.txtpatch -R b.txt &amp;lt; c.txt  这样 b.txt 文件就会变回 a.txt 的内容, -R 参数会保存未应">
@@ -400,8 +401,18 @@
 <blockquote>
 <h3 id="深入git-checkout"><a href="#深入git-checkout" class="headerlink" title="深入git checkout"></a>深入<code>git checkout</code></h3><p>这条命令会重写工作区<br>用法一: git checkout[-q][＜commit＞][–]＜paths＞…<br>用法二: git checkout[＜branch＞]<br>用法三: git checkout[-m][[-b|–orphan]＜new_branch＞][＜start_point＞]</p>
 <h3 id="与reset的不同"><a href="#与reset的不同" class="headerlink" title="与reset的不同"></a>与<code>reset</code>的不同</h3><p>第一种用法的＜commit＞是可选项，如果省略则相当于从暂存区（index）进行检出。这和上一章的重置命令大不相同：重置的默认值是HEAD，而检出的默认值是暂存区。因此重置一般用于重置暂存区（除非使用–hard参数，否则不重置工作区），而检出命令主要是覆盖工作区（如果＜commit＞不省略，也会替换暂存区中相应的文件）。</p>
+<p>第一种用法（包含了路径＜paths＞的用法）不会改变HEAD头指针，主要是用于指定版本的文件覆盖工作区中对应的文件。<em>如果省略＜commit＞，则会用暂存区的文件覆盖工作区的文件，否则用指定提交中的文件覆盖暂存区和工作区中对应的文件</em>。<br>第二种用法（不使用路径＜paths＞的用法）则会改变HEAD头指针。之所以后面的参数写作＜branch＞，是因为只有HEAD切换到一个分支才可以对提交进行跟踪，否则仍然会进入“分离头指针”的状态。在“分离头指针”状态下的提交不能被引用关联到，从而可能丢失。所以用法二最主要的作用就是切换到分支。如果省略＜branch＞则相当于对工作区进行状态检查。<br><img src="/images/git.jpg" alt=""><br>例子:<br><em><code>git checkout branch</code>:<br>checkout到branch分支, 完成图中1,2,3步骤, 更新HEAD指向branch, 用branch指向更新暂存区和工作区
+</em><code>git checkout</code>, <code>git checkout HEAD</code>: 显示工作区, 暂存区与HEAD的差异<br><em><code>git checkout -- filename</code>: 用暂存区filename替换工作区对应文件, 相当于<code>git add filename</code>反向操作
+</em><code>git checkout branch -- filename</code>: 保持HEAD不变, 用branch里面文件替换暂存区和工作区<br>*<code>git checkout .</code>, <code>git checkout -- .</code>: 取消本地所有修改, 相当于用暂存区覆盖工作区</p>
 </blockquote>
 </li>
+<li><p><code>git stash pop [--index][&lt;stash&gt;]</code>: <code>--index</code>参数除了恢复工作区, 还同时会恢复暂存区, 删除stash快照</p>
+</li>
+<li><code>git stash save &quot;message&quot;</code>: 保存暂存区的时候, 加入备注说明</li>
+<li><code>git stash apply [--index] [&lt;stash&gt;]</code>: 不删除stash快照</li>
+<li><code>git stash drop [&lt;stash&gt;]</code></li>
+<li><code>git stash clear</code></li>
+<li><code>git stash</code>: 需要先把工作区的新文件添加进入暂存区, 才能使用这个命令</li>
 </ol>
 
       
