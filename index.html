@@ -789,7 +789,7 @@
 </li>
 <li><p><code>git log --stat</code>可以看到每次提交的具体变更文件</p>
 </li>
-<li><code>git diff</code>比较工作区和暂存区的差异<br><code>git diff HEAD</code>比较工作区和HEAD(当前工作分支或者理解为版本库)的差异<br><code>git diff --cached</code>或者<code>--staged</code>比较暂存区和版本库里面的差别</li>
+<li><code>git diff</code>比较工作区和暂存区的差异<br><code>git diff HEAD</code>比较工作区和HEAD(当前工作分支或者理解为版本库)的差异<br><code>git diff --cached</code>或者<code>--staged</code>比较暂存区和版本库里面的差别<br><code>git diff &lt;commit&gt; &lt;commit | HEAD&gt;</code> 比较两个commit的差异<br><code>git diff master origin/master</code> 比较本地和远程的差异<br><code>git diff branch master</code>比较分支间的差异</li>
 <li>“当执行git status命令（或者git diff命令）扫描工作区改动的时候，先依据.git/index文件中记录的（用于跟踪工作区文件的）时间戳、长度等信息判断工作区文件是否改变，如果工作区文件的时间戳改变了，说明文件的内容可能被改变了，需要打开文件，读取文件内容，与更改前的原始文件相比较，判断文件内容是否被更改。如果文件内容没有改变，则将该文件新的时间戳记录到.git/index文件中。因为如果要判断文件是否更改，使用时间戳、文件长度等信息进行比较要比通过文件内容比较要快得多，所以Git这样的实现方式可以让工作区状态扫描更快速地执行，这也是Git高效的原因之一。”</li>
 <li><img src="/images/git1.jpg" alt=""></li>
 <li><code>git ls-tree -l HEAD</code>查看HEAD版本库中的文件索引</li>
@@ -839,13 +839,17 @@
 </em><code>git checkout branch -- filename</code>: 保持HEAD不变, 用branch里面文件替换暂存区和工作区<br>*<code>git checkout .</code>, <code>git checkout -- .</code>: 取消本地所有修改, 相当于用暂存区覆盖工作区</p>
 </blockquote>
 </li>
-<li><p><code>git stash pop [--index][&lt;stash&gt;]</code>: <code>--index</code>参数除了恢复工作区, 还同时会恢复暂存区, 删除stash快照</p>
-</li>
+<li><code>git stash --keep-index</code>: 保存暂存区和工作区快照</li>
+<li><code>git stash pop [--index][&lt;stash&gt;]</code>: <code>--index</code>参数除了恢复工作区, 还同时会恢复暂存区, 删除stash快照</li>
 <li><code>git stash save &quot;message&quot;</code>: 保存暂存区的时候, 加入备注说明</li>
 <li><code>git stash apply [--index] [&lt;stash&gt;]</code>: 不删除stash快照</li>
 <li><code>git stash drop [&lt;stash&gt;]</code></li>
 <li><code>git stash clear</code></li>
 <li><code>git stash</code>: 需要先把工作区的新文件添加进入暂存区, 才能使用这个命令</li>
+<li><code>git stash -u</code>: 可以保存未追踪的工作区状态</li>
+<li><code>git stash branch &lt;branch-name&gt;</code>: 新创建一个分支, 把当前所有stash用pop的方式应用到新的分支上</li>
+<li><code>git revert HEAD</code>: 撤销最新一步的提交, 返回到上一步状态, 同时会把这一次revert操作写入log</li>
+<li><code>git rebase --onto master server client</code>: 取出 client 分支，找出 client 分支和 server 分支的共同祖先之后的变化，然后把它们在master 上重演一遍, <a href="http://www.open-open.com/lib/view/open1328069889514.html#articleHeader16" target="_blank" rel="external">参考链接</a></li>
 </ol>
 
           
