@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="调试错误的容器  如果容器出了问题, run 之后无法跑起来, 可以通过docker logs container来看日志. 然后   12docker commit $CONTAINER_ID user/test_imagedocker run -ti --entrypoint=sh user/test_image   这样可以进容器去调试">
+<meta name="description" content="首先我声明一点, 我不是度飞特的工作人员, 也不认识度飞特的老板和运营人员  写这篇文章的目的, 是觉得微信群里面虽然人多, 但是说得比较乱, 没有人整理, 所以很多人都不想去看,而且群比较分散, 据我目前所知, 有两个微信群, 我只加了一个群–度飞特维权大润发分群, 另外一个群我不知道该如何加入. 所以我希望大家能到一个地方来讨论, 这篇文章会记录和群里面的一些重要信息, 并且会保持更新分享事件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker学习笔记">
-<meta property="og:url" content="http://yoursite.com/2018/05/27/docker学习笔记/index.html">
+<meta property="og:title" content="关于度飞特跑路的维权记录">
+<meta property="og:url" content="http://yoursite.com/2018/06/16/关于度飞特跑路的维权记录/index.html">
 <meta property="og:site_name" content="Ghexu">
-<meta property="og:description" content="调试错误的容器  如果容器出了问题, run 之后无法跑起来, 可以通过docker logs container来看日志. 然后   12docker commit $CONTAINER_ID user/test_imagedocker run -ti --entrypoint=sh user/test_image   这样可以进容器去调试">
+<meta property="og:description" content="首先我声明一点, 我不是度飞特的工作人员, 也不认识度飞特的老板和运营人员  写这篇文章的目的, 是觉得微信群里面虽然人多, 但是说得比较乱, 没有人整理, 所以很多人都不想去看,而且群比较分散, 据我目前所知, 有两个微信群, 我只加了一个群–度飞特维权大润发分群, 另外一个群我不知道该如何加入. 所以我希望大家能到一个地方来讨论, 这篇文章会记录和群里面的一些重要信息, 并且会保持更新分享事件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-27T08:00:19.893Z">
+<meta property="og:updated_time" content="2018-06-16T09:25:17.480Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker学习笔记">
-<meta name="twitter:description" content="调试错误的容器  如果容器出了问题, run 之后无法跑起来, 可以通过docker logs container来看日志. 然后   12docker commit $CONTAINER_ID user/test_imagedocker run -ti --entrypoint=sh user/test_image   这样可以进容器去调试">
+<meta name="twitter:title" content="关于度飞特跑路的维权记录">
+<meta name="twitter:description" content="首先我声明一点, 我不是度飞特的工作人员, 也不认识度飞特的老板和运营人员  写这篇文章的目的, 是觉得微信群里面虽然人多, 但是说得比较乱, 没有人整理, 所以很多人都不想去看,而且群比较分散, 据我目前所知, 有两个微信群, 我只加了一个群–度飞特维权大润发分群, 另外一个群我不知道该如何加入. 所以我希望大家能到一个地方来讨论, 这篇文章会记录和群里面的一些重要信息, 并且会保持更新分享事件">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/27/docker学习笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/16/关于度飞特跑路的维权记录/"/>
 
 
 
 
 
-  <title>docker学习笔记 | Ghexu</title>
+  <title>关于度飞特跑路的维权记录 | Ghexu</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/docker学习笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/16/关于度飞特跑路的维权记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hexu">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">docker学习笔记</h1>
+          <h1 class="post-title" itemprop="name headline">关于度飞特跑路的维权记录</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-27T15:58:01+08:00">
-                2018-05-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-16T15:48:44+08:00">
+                2018-06-16
               </time>
             
 
@@ -292,6 +292,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/杂事/" itemprop="url" rel="index">
+                    <span itemprop="name">杂事</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -300,8 +322,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/27/docker学习笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/27/docker学习笔记/" itemprop="commentCount"></span>
+                <a href="/2018/06/16/关于度飞特跑路的维权记录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/16/关于度飞特跑路的维权记录/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -329,12 +351,37 @@
       
 
       
-        <ul>
-<li><p>调试错误的容器<br>  如果容器出了问题, run 之后无法跑起来, 可以通过<code>docker logs container</code>来看日志. 然后</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker commit $CONTAINER_ID user/test_image</span><br><span class="line">docker run -ti --entrypoint=sh user/test_image</span><br></pre></td></tr></table></figure>
-<p>  这样可以进容器去调试</p>
-</li>
+        <big><strong>首先我声明一点, 我不是度飞特的工作人员, 也不认识度飞特的老板和运营人员</strong></big>
+
+<p>写这篇文章的目的, 是觉得微信群里面虽然人多, 但是说得比较乱, 没有人整理, 所以很多人都不想去看,而且群比较分散, 据我目前所知, 有两个微信群, 我只加了一个群–<code>度飞特维权大润发分群</code>, 另外一个群我不知道该如何加入. 所以我希望大家能到一个地方来讨论, 这篇文章会记录和群里面的一些重要信息, 并且会保持更新分享事件的进展, 另外文章最下方有留言板, 欢迎大家留言一起讨论.</p>
+<p>我是大润发店的会员, 于2018年3月底办的两年会员卡, 度飞特大润发店于6月6日左右跑路的, 目前大润发店的大门上加上了三把锁, 好像是物业施工方和消费者加上的, 里面的健身器材都还在. </p>
+<p>先说说我的维权经历:</p>
+<ol>
+<li>6月8号打电话给了12315</li>
+<li>6月14日南昌市工商局京东分局给我打电话来说这件案件涉及人数众多, 要我提交材料去分局. </li>
+<li>我去了度飞特的总店, 在艾溪湖桥头的云中城A座负一层, 目前该店还在营业, 里面还是打着度飞特的招牌, 但是负责人员说他们和度飞特没有关系, 也不承认大润发店的会员, 不知道总店度飞特办的卡是不是可以继续使用, 欢迎你们在文章末尾留言告诉我.</li>
+<li>然后我去了工商局京东分局, 据里面的警官说, 大润发店是无证经营, 所以现在合同的合法性比较难确认. 群里面说度飞特的老板叫李根, 我不知道他现在是被工商局控制着还是跑路了, 我所掌握的信息很少. 如果控制着相关人员还好说, 如果找不到人, 我们的钱应该很难被追回. 据我所知, 大润发店还欠着装修费十来万, 不知道是不是.</li>
+</ol>
+<p>我个人说说我的想法:</p>
+<ul>
+<li>首先度飞特的事情肯定要继续追踪下去, 大家先去工商局报案, 报案人数越多, 涉事金额越大, 工商部门会越重视这个案件(文章下方有报案要准备的材料). 群里有人分享了一个12315的微信服务号, 我不确定这个上面报案是不是有一样的效果.</li>
+<li>我个人觉得度飞特跑路应该是没钱了, 资金链断裂了, 就算人找到了, 也很难拿回办卡的钱. 最多就是把运动器材找人处理换钱来赔偿, 但是这个钱应该远远不够赔偿吧. </li>
 </ul>
+<hr>
+<p>作为消费者, 我只是想能够继续使用卡进行健身就行, 所以我想能不能把想继续健身的消费者统计一下数量(<strong>我希望大润发店这边有100人</strong>), 然后我们继续接下来进行运营, 前提是我们得了解度飞特现在的债务情况, 最好的情况是工商局出面来处理器材费用, 我们能优先接手运营. </p>
+<p>我这里说的是众筹运营(<strong>最好有100人</strong>), 最好首先我们接下来别想着赚钱, 只要店里面接受的新会员能维持最低的人工费用, 房租水电, 器材折旧费用就行. 大家每个人都是股东, 希望大家能多去拉新会员, 我们没有盈利的目的, 只要能维持最低的运营费用就行, 这样会员费可以很低, 新会员也可以不用担心健身房跑路.</p>
+<p>至于度飞特的债务问题, 我希望大家有律师朋友的, 可以去多问问要怎么处理. 我觉得最理想的状况是我们不用承担原先度飞特工资人员的拖欠工资以及装修施工方的欠款, 只是那器材处理获得的费用来偿还这些债务. 我觉得这些器材也不值什么钱, 今后运营的费用主要是房租那一块, 我不知道房租要多少钱, 我们来运营的话, 尽可能发动我们100个股东的力量来做日常维护, 比如开门, 打算卫生等等. 这些运营的细节是我们后面讨论的事情, 但我希望我们能开起一个我们自己的健身馆, 我就希望有一个早上7点钟就能运动的健身馆.</p>
+<big><strong>最后最重要的事情, 就是一定要去报案, 不能让坏人逍遥法外</strong></big>
+
+<p>分局地址在南京东路青春家园东门, 进了小区大门, 就是工商局. 进去之后大概走了半层, 左手边就是消费者12315接待部门, 联系电话 <a href="tel:0791-88187235" target="_blank" rel="external">0791-88187235</a>.<br>请先准备好相关材料:</p>
+<ol>
+<li>办卡时的合同和收据, </li>
+<li>自己手写或者打印好事情的经过, 包括办卡的经过, 办卡的费用, 损失的金额, 还有自己的联系方式</li>
+<li>准备好度飞特的会员卡和你自己的身份证</li>
+</ol>
+<p><strong>请各位一定去报案, 这样我们消费者的损失金额越大, 人数越多, 赔偿起来, 我们分到的赔偿金越多, 你不去报案就一分钱没有</strong></p>
+<p>我希望, 就算我们不接手度飞特的店, 我们有相同爱好的也能开启一家众筹的全新的健身房.</p>
+<p>欢迎大家在下面留言板讨论, 注意保留好个人的隐私信息.</p>
 
       
     </div>
@@ -359,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/20/fcp学习笔记/" rel="next" title="fcp学习笔记">
-                <i class="fa fa-chevron-left"></i> fcp学习笔记
+              <a href="/2018/06/12/css笔记/" rel="next" title="css笔记">
+                <i class="fa fa-chevron-left"></i> css笔记
               </a>
             
           </div>
@@ -368,10 +415,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/04/Linux常用命令/" rel="prev" title="Linux常用命令">
-                Linux常用命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
