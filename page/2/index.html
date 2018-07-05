@@ -107,9 +107,9 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
+      applicationID: 'JWMYD1TO47',
       apiKey: '',
-      indexName: '',
+      indexName: 'ghexu',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -221,9 +221,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -333,8 +371,15 @@
       
         
           
-            
           
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/10/Nginx学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -484,19 +529,20 @@
       
         
           
-            <ol>
-<li><p>测试中使用</p>
- <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">it_is_a_test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">$this</span>-&gt;withoutExceptionHandling();</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 这样可以在终端中显示具体的php报错的位置.</p>
-</li>
-<li><p>测试中使用<code>expectException()</code>方法可以用来测试抛出错误</p>
- <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Acme.php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Acme</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        ...</span></span><br><span class="line"><span class="function">        <span class="title">throw</span> \<span class="title">Exception</span><span class="params">(<span class="string">'This is a error!'</span>)</span></span></span><br><span class="line"><span class="function">&#125;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">// <span class="title">AcmeTest</span>.<span class="title">php</span></span></span><br><span class="line"><span class="function"><span class="title">class</span> <span class="title">AcmeTest</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">it_is_a_test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;expectException(\<span class="keyword">Exception</span>::class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在生产环境中使用<code>config:cache</code>后, 只能在cofing文件中使用<code>env()</code>, 因为<code>.env</code>文件不会再被加载, 所有<code>.env</code>文件中的值都被读取为NULL</p>
-</li>
-</ol>
-
           
+测试中使用
+ 1234function it_is_a_test()&#123;    $this-&gt;withoutExceptionHandling();    ...&#125;
+ 这样可以在终端中显示具体的php报错的位置.
+
+测试中使用expectException()方法可以用来测
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/04/Laravel中的细节/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -646,16 +692,23 @@
       
         
           
-            <p>可能的解决方法</p>
-<ol>
-<li><p>重装valet</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">valet stop</span><br><span class="line">valet install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>换一个域名后缀</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">valet domain test</span><br></pre></td></tr></table></figure></li>
-</ol>
+          可能的解决方法
+
+重装valet
+ 12valet stopvalet install
+
+换一个域名后缀
+ 1valet domain test
+
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/02/升级Macos到10-13后valet无法使用解决方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -783,9 +836,16 @@
       
         
           
-            <p>感觉还是不能忽略掉百度等搜索引擎带来的流量, 做一个简单的网站, 就是显示图片和价格, 不支持在线支付. 目的只有一个, 就是做seo, 后期流量起来了, 在改版做成在线支付的吧</p>
+          感觉还是不能忽略掉百度等搜索引擎带来的流量, 做一个简单的网站, 就是显示图片和价格, 不支持在线支付. 目的只有一个, 就是做seo, 后期流量起来了, 在改版做成在线支付的吧
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/15/做一个专门seo的批发网站/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -935,15 +995,20 @@
       
         
           
-            <ol>
-<li>尽量别在自己的朋友圈里面发营销内容, 因为你自己的朋友圈几乎不会点开看.</li>
-<li>从淘宝里面找客户, 关注营销的个人微信号, 在营销个人号的朋友圈里面发内容.</li>
-<li>利用微信机器人自动同意好友申请, 然后让用户关注服务号.</li>
-<li>朋友圈里面发的商品以九宫格加链接的方式, 导入流量到服务号.</li>
-<li>加入各种群, 里面发的内容以商品图片加二维码</li>
-</ol>
-
           
+尽量别在自己的朋友圈里面发营销内容, 因为你自己的朋友圈几乎不会点开看.
+从淘宝里面找客户, 关注营销的个人微信号, 在营销个人号的朋友圈里面发内容.
+利用微信机器人自动同意好友申请, 然后让用户关注服务号.
+朋友圈里面发的商品以九宫格加链接的方式, 导入流量到服务号.
+加入各种群, 里面发的内容
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/11/今后做微商的运营思路/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1093,9 +1158,15 @@
       
         
           
-            <p>伤心了, 朋友圈里面根本就没人买东西, 还是去淘宝拉用户<br>花了几个月的时间弄微信商城, 发现朋友圈里面几乎没有人买东西. 看来今后的策略得转变了, 淘宝上面用低价吸引客户关注微信公众号, 然后公众号里面卖一些敏感东西, 加上分销的功能, 让微信里面的粉丝去分享关注, 然后再把微信用户吸引到淘宝上去刷单</p>
-
-          
+          伤心了, 朋友圈里面根本就没人买东西, 还是去淘宝拉用户花了几个月的时间弄微信商城, 发现朋友圈里面几乎没有人买东西. 看来今后的策略得转变了, 淘宝上面用低价吸引客户关注微信公众号, 然后公众号里面卖一些敏感东西, 加上分销的功能, 让微信里面的粉丝去分享关注, 然后再把微信用户吸引到淘宝上去刷单
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/11/微信商城失败/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1245,9 +1316,16 @@
       
         
           
-            <p>学习python, 发现了jupyter这么个好东西, 终于解决了我那么久的代码渲染问题, 可以抛弃evernote了, 重新开始博客.</p>
+          学习python, 发现了jupyter这么个好东西, 终于解决了我那么久的代码渲染问题, 可以抛弃evernote了, 重新开始博客.
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/08/重新写博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1588,12 +1666,40 @@
 
 
 
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.3"></script>
+
+
 
   
 
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
