@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Ghexu">
 <meta property="og:description" content="测试中使用  1234function it_is_a_test()&amp;#123;    $this-&amp;gt;withoutExceptionHandling();    ...&amp;#125;  这样可以在终端中显示具体的php报错的位置.  测试中使用expectException()方法可以用来测试抛出错误  12345678910111213// Acme.phpclass Acme&amp;#123">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-15T18:14:41.341Z">
+<meta property="og:updated_time" content="2018-07-24T10:57:08.527Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Laravel中的细节">
 <meta name="twitter:description" content="测试中使用  1234function it_is_a_test()&amp;#123;    $this-&amp;gt;withoutExceptionHandling();    ...&amp;#125;  这样可以在终端中显示具体的php报错的位置.  测试中使用expectException()方法可以用来测试抛出错误  12345678910111213// Acme.phpclass Acme&amp;#123">
@@ -408,6 +408,8 @@
  <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Acme.php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Acme</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        ...</span></span><br><span class="line"><span class="function">        <span class="title">throw</span> \<span class="title">Exception</span><span class="params">(<span class="string">'This is a error!'</span>)</span></span></span><br><span class="line"><span class="function">&#125;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">// <span class="title">AcmeTest</span>.<span class="title">php</span></span></span><br><span class="line"><span class="function"><span class="title">class</span> <span class="title">AcmeTest</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">it_is_a_test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;expectException(\<span class="keyword">Exception</span>::class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在生产环境中使用<code>config:cache</code>后, 只能在cofing文件中使用<code>env()</code>, 因为<code>.env</code>文件不会再被加载, 所有<code>.env</code>文件中的值都被读取为NULL</p>
+</li>
+<li><p>测试的时候, 可以在web.php的路由文件中监听event, 模拟事件触发</p>
 </li>
 </ol>
 
